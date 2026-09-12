@@ -97,7 +97,6 @@ insurance-dashboard/
 | **🧪 Hypothesis Testing Lab** | Dropdowns to pick any categorical factor + numeric metric → auto-selects t-test / Mann-Whitney / ANOVA, reports statistic, p-value, and Reject/Fail-to-Reject conclusion; plus an ad-hoc Chi-Square tool for any two categorical variables |
 | **🔮 Live Prediction & Diagnostics** | Sliders/inputs for a new individual → real-time OLS prediction with 95% CI (mean) and prediction interval (individual), plus residuals-vs-fitted and Q-Q diagnostic plots, VIF table, and full model summary |
 
-## 6. Optional Bonus
-To claim the +5 mark bonus, deploy `app.py` to [Streamlit Community Cloud](https://share.streamlit.io) and add the public URL here:
+## 6. url to app
 
-> **Live demo:** _add your share.streamlit.io URL here after deploying_
+> **Live demo:** [_add your share.streamlit.io URL here after deploying_](https://202618006ds602-6nxns5wyrw35cbsdbcokxf.streamlit.app/)
