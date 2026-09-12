@@ -6,6 +6,7 @@ Run with:
     streamlit run app.py
 """
 
+import os
 import numpy as np
 import pandas as pd
 import plotly.express as px
@@ -30,10 +31,17 @@ st.set_page_config(
 NUMERIC_COLS = ["age", "bmi", "children", "charges"]
 CATEGORICAL_COLS = ["sex", "smoker", "region"]
 
+# Anchor the data path to this script's own folder, NOT the current working
+# directory. Streamlit Cloud runs the app with cwd = repo root, which breaks
+# plain relative paths like "data/insurance.csv" whenever app.py lives in a
+# subfolder of the repo.
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(BASE_DIR, "data", "insurance.csv")
+
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("data/insurance.csv")
+    df = pd.read_csv(DATA_PATH)
     return df
 
 
